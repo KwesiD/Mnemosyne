@@ -45,7 +45,7 @@ def generate_sentence(sequence,frequency_table,tag_table,word_tag_table): #seque
 		try:
 			for word in words_with_tag:
 
-				words_with_tag[word] /= count
+				words_with_tag[word] /= count #numpy.random.choice requires that probablilities total 1. This somewhat adjusts probabilities
 		except ZeroDivisionError:
 					#i -= 1
 					retries += 1
